@@ -24,7 +24,11 @@ const pastrySchema = new mongoose.Schema({
     },
     recipe: {
         type: String,
-        required: True
+        required: true
+    },
+    image: {
+        type: String,
+        required: false
     }
 })
 

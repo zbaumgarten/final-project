@@ -2,9 +2,9 @@ const router = require('express').Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-const { validateJWT } = require('../middleware/auth')
+const { validateJWT } = require('../middleware/authentication')
 
-const User = require('../models/User')
+const User = require('../modella/User')
 
 router.post('/signup', async (req, res) => {
     const { username, password } = req.body

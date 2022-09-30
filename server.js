@@ -1,13 +1,21 @@
 // dependencies
 require('dotenv').config()
+const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+
+const userRoutes = require('./controllers/User')
+const pastryRoutes = require('./controllers/Pastry')
 
 const app = express()
 
 app.use(express.json())
 
 app.use(cors())
+
+//rootes
+app.use('/user', userRoutes)
+app.use('/', pastryRoutes)
 
 
 //db connection 
