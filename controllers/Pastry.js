@@ -70,7 +70,7 @@ router.post('/new_pastry', async (req, res) => {
     try {
         const { pastry, description, originCountry, history, originYear, recipe, image } = req.body
 
-        const createNewPastry = await new SCP({
+        const createNewPastry = await new pastry({
             pastry,
             description,
             originCountry,
